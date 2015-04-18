@@ -19,7 +19,7 @@ public class PlayerController : MonoBehaviour {
 		}
 		// if (_jumpInterval <= 0.0f) {
 			if (Input.GetKeyDown("space") || Input.GetKeyDown("w") || Input.GetKeyDown("up")) {
-				_rb2d.AddForce(Vector2.up * 300);
+				_rb2d.AddForce(Vector2.up * 500);
 				_jumpInterval = 2.0f;
 			}
 		// }
@@ -36,12 +36,18 @@ public class PlayerController : MonoBehaviour {
 		{
 			_anim.SetFloat("leftInput", 1);
 			_rb2d.velocity = new Vector2(-3, _rb2d.velocity.y);
+			GameObject waterTrail = GameObject.Find("WaterTrail");
+			Quaternion rot = waterTrail.transform.localRotation;
+			waterTrail.transform.localRotation = new Quaternion(rot.x, -90, rot.z, rot.w);
 		}
 
 		if (Input.GetKey("right") || Input.GetKey("d"))
 		{
 			_anim.SetFloat("rightInput", 1);
 			_rb2d.velocity = new Vector2(3, _rb2d.velocity.y);
+			Quaternion rot = GameObject.Find("WaterTrail").transform.localRotation;
+			Debug.Log(rot);
+			GameObject.Find("WaterTrail").transform.localRotation = new Quaternion(rot.x, 180, rot.z, rot.w);
 		}
 
 	}

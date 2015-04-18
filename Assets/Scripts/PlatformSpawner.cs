@@ -43,7 +43,7 @@ public class PlatformSpawner : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-	    if(Input.GetKey(KeyCode.X))
+	    if(Input.GetKeyUp(KeyCode.X))
         {
             ClearPlatforms();
             SpawnPlatforms();

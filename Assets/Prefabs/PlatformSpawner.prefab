@@ -39,12 +39,18 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0cd7ce23484d7504ba6fbc365f4c383a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  BrickPrefabs: []
-  FloorNumber: 0
-  BrickNumberPerFloorMin: 0
-  BrickNumberPerFloorMax: 0
-  IntervalX: 0
-  IntervalY: 0
+  BrickPrefabs:
+  - {fileID: 158024, guid: c3cc57fd7725c2b46830f5778b6ec685, type: 2}
+  - {fileID: 195608, guid: 227f5f6210642ed4692626d010f968b6, type: 2}
+  - {fileID: 197208, guid: 0a01932f542a2514680c48fe4a5d959b, type: 2}
+  - {fileID: 169678, guid: 4a5c2a1bb8f784b40bf2b07b2c5e9e6d, type: 2}
+  - {fileID: 161028, guid: dbb806c069817074bbecf043247c310e, type: 2}
+  - {fileID: 123256, guid: 7cafdf3396c38164aa6ccf2f704aa742, type: 2}
+  FloorNumber: 3
+  BrickNumberPerFloorMax: 4
+  IntervalX: 3
+  IntervalY: 3
+  BrickBaseWidth: 5
 --- !u!1001 &100100000
 Prefab:
   m_ObjectHideFlags: 1
