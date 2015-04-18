@@ -147,7 +147,7 @@ public class PlatformSpawner : MonoBehaviour {
                 {
                     GameObject brickGo = (GameObject)CacheManager.Instance.InstantiateObject(BrickPrefabs[brickIdx]);
                     Brick brick = brickGo.GetComponent<Brick>();
-                    brickGo.transform.position = pos + transform.position;
+                    brickGo.transform.position = pos + transform.position; 
                     brickGo.transform.parent = mFloorRoots[y];
 
                     mBrickCollection[y][x] = brick;
