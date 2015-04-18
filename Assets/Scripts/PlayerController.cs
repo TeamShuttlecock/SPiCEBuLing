@@ -17,6 +17,12 @@ public class PlayerController : MonoBehaviour {
 		if (_jumpInterval > 0) {
 			_jumpInterval -= Time.deltaTime;
 		}
+		// if (_jumpInterval <= 0.0f) {
+			if (Input.GetKeyDown("space") || Input.GetKeyDown("w") || Input.GetKeyDown("up")) {
+				_rb2d.AddForce(Vector2.up * 300);
+				_jumpInterval = 2.0f;
+			}
+		// }
 	}
 
 	// Update is called once per frame
@@ -38,11 +44,5 @@ public class PlayerController : MonoBehaviour {
 			_rb2d.velocity = new Vector2(3, _rb2d.velocity.y);
 		}
 
-		// if (_jumpInterval <= 0.0f) {
-			if (Input.GetKeyDown("space") || Input.GetKeyDown("w") || Input.GetKeyDown("up")) {
-				_rb2d.AddForce(Vector2.up * 300);
-				_jumpInterval = 2.0f;
-			}
-		// }
 	}
 }
