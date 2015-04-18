@@ -35,36 +35,20 @@ public class PlatformSpawner : MonoBehaviour {
         }
     }
 
-	// Use this for initialization
-	void Start () {
+    // Use this for initialization
+    void Start () {
 
         Init();
-	}
-	
-	// Update is called once per frame
-	void Update () {
-	    if(Input.GetKeyUp(KeyCode.X))
-        {
-            ClearPlatforms();
-            SpawnPlatforms();
-        }
-	}
+        SpawnPlatforms();
+    }
+    
+    // Update is called once per frame
+    void Update () {
+    }
 
     public void Init()
     {
         for(int i=0; i<FloorNumber; i++)
-        {
-            mBrickCollection.Add(new List<Brick>());
-            for(int j=0; j<BrickNumberPerFloorMax; j++)
-            {
-                mBrickCollection[i].Add(null);
-            }
-        }
-    }
-
-    public void ClearPlatforms()
-    {
-        for (int i = 0; i < mBrickCollection.Count; i++)
         {
             if (mFloorRoots.Count <= i)
             {
@@ -77,7 +61,18 @@ public class PlatformSpawner : MonoBehaviour {
 
                 mFloorRoots.Add(floorRoot);
             }
+            mBrickCollection.Add(new List<Brick>());
+            for(int j=0; j<BrickNumberPerFloorMax; j++)
+            {
+                mBrickCollection[i].Add(null);
+            }
+        }
+    }
 
+    public void ClearPlatforms()
+    {
+        for (int i = 0; i < mBrickCollection.Count; i++)
+        {
             for (int j = 0; j < mBrickCollection[i].Count; j++ )
             {
                 if (mBrickCollection[i][j] != null)
