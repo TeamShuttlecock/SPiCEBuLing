@@ -41,6 +41,11 @@ public class PlatformSpawner : MonoBehaviour {
         Init();
         SpawnPlatforms();
     }
+
+    public void Respawn() {
+        ClearPlatforms();
+        SpawnPlatforms();   
+    }
     
     // Update is called once per frame
     void Update () {
