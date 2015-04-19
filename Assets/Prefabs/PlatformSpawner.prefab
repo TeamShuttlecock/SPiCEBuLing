@@ -23,7 +23,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 128428}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -11.29, y: -1.61000001, z: 0}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -48,8 +48,8 @@ MonoBehaviour:
   - {fileID: 123256, guid: 7cafdf3396c38164aa6ccf2f704aa742, type: 2}
   FloorNumber: 3
   BrickNumberPerFloorMax: 4
-  IntervalX: 2
-  IntervalY: 2
+  IntervalX: 3
+  IntervalY: 3
   BrickBaseWidth: 5
 --- !u!1001 &100100000
 Prefab:
