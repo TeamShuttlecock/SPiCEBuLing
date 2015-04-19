@@ -20,7 +20,7 @@ public class LevelManager : MonoBehaviour {
 	void spawnGhostFire() {
 		for (int i = 0; i < (int)Mathf.Sqrt(_level); i++) {
 			GameObject ghostFire = (GameObject)Object.Instantiate(_ghostFirePrefab);
-			ghostFire.transform.position = new Vector3((int)Random.Range(-7, 7), (int)Random.Range(-3, 3), 0);
+			ghostFire.transform.position = new Vector3(Random.Range(-7, 7), Random.Range(-3, 3), 0);
 			_ghostFireList.Add(ghostFire);
 		}
 	}
@@ -29,7 +29,7 @@ public class LevelManager : MonoBehaviour {
 	void Update () {
 		if (_ghostFireList.Count == 0) {
 			_level++;
-			Debug.Log("Level : " + _level);
+			// Debug.Log("Level : " + _level);
 			spawnGhostFire();
 			_platformSpawner.GetComponent<PlatformSpawner>().Respawn();
 		}	
