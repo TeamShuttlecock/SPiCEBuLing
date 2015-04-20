@@ -45,7 +45,7 @@ GameObject:
   - 198: {fileID: 19838640}
   - 199: {fileID: 19938640}
   m_Layer: 0
-  m_Name: Extinguished Smoke
+  m_Name: ExtinguishedSmoke
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2053,7 +2053,7 @@ ParticleSystem:
   startDelay: 0
   speed: 1
   randomSeed: 0
-  looping: 0
+  looping: 1
   prewarm: 1
   playOnAwake: 1
   moveWithTransform: 1

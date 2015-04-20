@@ -25,19 +25,19 @@ public class Fire_Visual_Control : MonoBehaviour {
                 firePrefab.SetActive(true);
                 smokePrefab.SetActive(false);
                 extinctionPrefab.SetActive(false);
-                print("nomal");
+                //print("nomal");
                 break;
             case 2:
                 firePrefab.SetActive(true);
                 smokePrefab.SetActive(true);
                 extinctionPrefab.SetActive(false);
-                print("smoking");
+                //print("smoking");
                 break;
             case 3:
                 firePrefab.SetActive(false);
                 smokePrefab.SetActive(false);
                 extinctionPrefab.SetActive(true);
-                print("extinction");
+                //print("extinction");
                 break;
         }
     }
