@@ -30,12 +30,12 @@ public class Wave
 		if (Mathf.Abs(_offsetX) > 0.5f || Mathf.Abs(_offsetY )> 0.5f) {
 			_offsetX = 0;
 			_offsetY = 0;
-			_offsetX = _offsetX + scroll_offSet_Speed.x;
-			_offsetY = _offsetY + scroll_offSet_Speed.y;
+            _offsetX += scroll_offSet_Speed.x * Time.deltaTime;
+            _offsetY += scroll_offSet_Speed.y * Time.deltaTime;
 			
 		} else if (Mathf.Abs(_offsetX) <= 0.5f || Mathf.Abs(_offsetY ) <= 0.5f) {
-			_offsetX = _offsetX + scroll_offSet_Speed.x;
-			_offsetY = _offsetY + scroll_offSet_Speed.y;
+			_offsetX += scroll_offSet_Speed.x * Time.deltaTime;
+            _offsetY += scroll_offSet_Speed.y * Time.deltaTime;
 		}
 		_offset_OverTime.Set (_offsetX, _offsetY);
 		_material_To_Scroll.SetTextureOffset ("_MainTex", _offset_OverTime);
