@@ -83,7 +83,7 @@ public class PlatformSpawner : MonoBehaviour {
                 if (mBrickCollection[i][j] != null)
                 {
                     CacheManager.Instance.DestroyCachedObject(mBrickCollection[i][j].gameObject);
-
+                    //GameObject.Destroy(mBrickCollection[i][j].gameObject);
                     mBrickCollection[i][j] = null;
                 }
             }
@@ -92,6 +92,7 @@ public class PlatformSpawner : MonoBehaviour {
 
     public void SpawnPlatforms()
     {
+        print("spawn");
         float currentPosX = 0.0f;
 
         for (int y = 0; y < FloorNumber; y++)
@@ -146,6 +147,8 @@ public class PlatformSpawner : MonoBehaviour {
                 if(shouldSpawn)
                 {
                     GameObject brickGo = (GameObject)CacheManager.Instance.InstantiateObject(BrickPrefabs[brickIdx]);
+                    //GameObject brickGo = GameObject.Instantiate(BrickPrefabs[brickIdx],Vector3.zero,Quaternion.identity)as GameObject;
+
                     Brick brick = brickGo.GetComponent<Brick>();
                     brickGo.transform.position = pos + transform.position;
                     brickGo.transform.parent = mFloorRoots[y];
