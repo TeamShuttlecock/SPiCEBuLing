@@ -70,6 +70,23 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!1 &122708
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 422708}
+  - 58: {fileID: 5822708}
+  - 114: {fileID: 11449860}
+  m_Layer: 0
+  m_Name: Collider
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
 --- !u!1 &131952
 GameObject:
   m_ObjectHideFlags: 1
@@ -130,6 +147,7 @@ Transform:
   - {fileID: 403068}
   - {fileID: 403064}
   - {fileID: 431954}
+  - {fileID: 422708}
   m_Father: {fileID: 0}
   m_RootOrder: 0
 --- !u!4 &403068
@@ -156,6 +174,18 @@ Transform:
   m_Children: []
   m_Father: {fileID: 403066}
   m_RootOrder: 0
+--- !u!4 &422708
+Transform:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 122708}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: -0, z: -.239999995}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 403066}
+  m_RootOrder: 4
 --- !u!4 &431952
 Transform:
   m_ObjectHideFlags: 1
@@ -181,6 +211,17 @@ Transform:
   - {fileID: 431952}
   m_Father: {fileID: 403066}
   m_RootOrder: 3
+--- !u!58 &5822708
+CircleCollider2D:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 122708}
+  m_Enabled: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Radius: .5
+  m_Center: {x: 0, y: 0}
 --- !u!65 &6503070
 BoxCollider:
   m_ObjectHideFlags: 1
@@ -204,6 +245,18 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fdfa2b012a795a4439869cb96d6cbe36, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &11449860
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 122708}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 45f159e3dda401e4ba19a9d260de0572, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  fireDamage: 1
 --- !u!198 &19803064
 ParticleSystem:
   m_ObjectHideFlags: 1

@@ -3,16 +3,32 @@ using System.Collections;
 
 public class PlayerController : MonoBehaviour {
 
-	private Animator _anim;
-	private Rigidbody2D _rb2d;
-	private float _jumpInterval = 0;
-	private GameObject waterTrail;
+	Animator _anim;
+	Rigidbody2D _rb2d;
+	float _jumpInterval = 0;
+	GameObject waterTrail;
+
+	public int defaultHP = 100;
+	public int hpRecovered = 20; // hp recovered when finished a level
+	public int hp { get; set; } // Default HP
 
 	// Use this for initialization
 	void Start() {
 		_anim = GetComponent<Animator>();
 		_rb2d = GetComponent<Rigidbody2D>();
 		waterTrail = GameObject.Find("WaterTrail");
+		Restart();
+	}
+
+	public void Restart() {
+		hp = defaultHP;
+	}
+
+	public void Recover() {
+		hp = hp + hpRecovered;
+		if (hp > defaultHP) {
+			hp = defaultHP;
+		}
 	}
 
 	void Update() {
